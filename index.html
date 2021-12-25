@@ -1,16 +1,39 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <title> Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <div class ="maindiv">
+    
         <h1>Simple Interest Calculator</h1>
+        <label for="principal">Amount   :</label> 
+        <input type="number"  id="principal">  <br/>
+        <label for="years"> No. of Years</label>
+        <select id="years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br/>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Interest : <input type="range" id="interest" name="interest" min="1" max="20" onchange="changeSliderVal()"> 
+        <span id="result"> 4.25%</span><br>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+        <button onclick="compute()">Compute interest</button><br><br>
+        <span id="result2" style="font-family: cursive;"></span><br><br>
+        
+    </div>
+    <div id="div2">
+        <result2></result2>
+        <footer>&#169; This Calculator belongs to Ashok Sharma Paudel</footer>
+    </div>
 </html>
